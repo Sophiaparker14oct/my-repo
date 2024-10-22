@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <link rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAeCAYAAADQBxWhAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADHSURBVHgB7ZbtDYIwEIZfDAM4gqPgCI7gBLKBsoEjOIIjdISOcCOwAb6tkiDhM/TgB32Sprm2yZPeQdskR1VBn+KJ5FEHB2zAJtK0FRdsgvDYIalh7g2U2W9N/+DvlLM7IiySjiy4sZ0QFrOfmkZplEbpLMZOpDmYietsMCmvxPPUtbGmi+CVmLHLeqbfKtKf8N4xbt1TdM30useZ/9jWknohd1m6wKX31ZgsER5hu9RCL2VwhR6C7w6lOaiZXukSakqlT+j4ACKHJN7ycd7wAAAAAElFTkSuQmCC" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    @media only screen and (max-width:767px) {
+      section.main-section-kop {
+        margin: 15% 0% !important;
+      }
+
+      .rectangle-img-kop {
+        display: none;
+      }
+
+      .title-kop {
+        font-size: 16px !important;
+        line-height: 22px !important;
+      }
+    }
+
+    @media only screen and (min-width:768px) and (max-width:1024px) {
+      section.main-section-kop {
+        margin: 10% 0% !important;
+      }
+    }
+
+    @media only screen and (min-width:375px) and (max-width:767px) {
+      .image-icon-kop {
+        width: 161px;
+
+      }
+    }
+
+    @media only screen and (min-width:1025px) {
+      section.main-section-kop {
+        margin: 5% 27% !important;
+      }
+    }
+
+    .icon-with-name-kop {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+
+    .date {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+    }
+
+    .author {
+      margin-right: 1.5em;
+    }
+
+    .header-kop {
+      display: flex;
+      justify-content: space-between;
+      color: #111;
+    }
+
+    .header-item-kop {
+      display: flex;
+      width: 90%;
+    }
+
+    .logoIcon-kop {
+      width: 26px;
+      /* height: 45px; */
+      /* margin-right: 25px;
+      padding-top: 22px;
+      padding-left: 19px; */
+    }
+
+    .title-kop {
+      font-family: "Sora", sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      text-align: left;
+      line-height: 30px;
+      padding-left: 13px;
+    }
+
+    .title-details-kop {
+      font-family: "Lato", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      color: #454d57 !important;
+      text-transform: capitalize;
+      padding-top: 12px;
+      padding-left: 13px;
+      width: 114%;
+    }
+
+    .title-details-kop span {
+      color: #0000003b;
+    }
+
+    .description-kop {
+      font-family: "Lato", sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      color: #454d57 !important;
+      text-transform: capitalize;
+      padding-top: 17px;
+      padding-left: 13px;
+      width: 100%;
+      line-height: 1.6em;
+      margin-top: 5px;
+    }
+
+    .title-details-kop img {
+      width: 25px;
+      margin-right: 5px;
+    }
+
+    .step-count-kop {
+      background-color: #8bca05;
+      width: 65px;
+      height: 65px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: "Lato", sans-serif;
+      color: #ffffff;
+    }
+
+    .step-count-kop .count-number-kop {
+      line-height: 20px;
+      font-weight: 700;
+      font-size: 22px;
+    }
+
+    .steps-kop {
+      margin: 30px 0;
+      background: #f4f3fb;
+      border: 1px solid #e2e3f6;
+      border-radius: 5px;
+      /* padding: 10px 25px; */
+    }
+
+    .step-description-kop {
+      font-size: 13px;
+      font-weight: 400;
+      display: flex;
+    }
+
+    .step-number-count-kop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #7000ff;
+      font-family: "Lato", sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      background: #7000ff1f;
+      line-height: 0;
+    }
+
+    .step-number-kop {
+      margin: 20px 0 20px 20px;
+    }
+
+    .step-detail-kop {
+      color: #454d57;
+      font-family: "Lato", sans-serif;
+      font-size: 16px;
+      font-weight: 500;
+      margin: 30px 30px 10px 20px;
+    }
+
+    .step-header-kop {
+      color: #454d57;
+      font-size: 16px;
+      padding-bottom: 15px;
+    }
+
+    .step-urls-kop {
+      color: #7000ff;
+      border: 1px solid #7000ff;
+      border-radius: 5px;
+      padding: 6px 10px;
+      font-weight: 500;
+      line-height: 33px;
+      word-wrap: break-word;
+      overflow-wrap: anywhere;
+    }
+
+    .image-container-kop {
+      position: relative;
+      margin: 0 30px 30px 30px;
+    }
+
+    .custom-cursor-kop {
+      position: absolute;
+      z-index: 156546546546464655465;
+      width: 47px !important;
+      height: 47px !important;
+    }
+
+    .step-image-kop {
+      object-fit: fill;
+      width: 100%;
+
+    }
+
+    .alert-kop {
+      color: #ffffff;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 500;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      background: #ea4e2c;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    .tip-kop {
+      color: #ffffff;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 500;
+      text-align: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 9999px;
+      background: #3ab45c;
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    /* hr {
+                background-color: #d9d9d9;
+                margin: 45px 0;
+              } */
+
+    .header-content-kop {
+      width: 90%;
+    }
+
+    .count-number-steps-kop {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .header-mobile-kop {
+      display: none;
+    }
+
+    .rectangle-img-kop {
+      width: 100%;
+      /* height: 1px; */
+      padding-top: 35px;
+    }
+
+    .icon-with-name-kop {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+    }
+
+    .icon-with-name-kop img {
+      width: 16px;
+    }
+
+    @media screen and (max-width: 1605px) {
+
+      .step-number-count-kop {
+        font-size: 14px;
+        width: 35px;
+        height: 35px;
+      }
+
+      .step-header-kop {
+        font-size: 14px;
+      }
+
+      /* hr {
+                  margin: 30px 0;
+                } */
+    }
+
+
+
+    @media screen and (max-width: 786px) {
+      .title-details-kop {
+        font-size: 10px;
+      }
+
+      .step-text-kop {
+        font-size: 12px;
+      }
+
+      .step-count-kop {
+        width: 50px;
+        height: 50px;
+      }
+
+      .count-number-kop {
+        font-size: 12px !important;
+        line-height: 10px !important;
+      }
+
+      .count-number-steps-kop {
+        font-size: 10px !important;
+      }
+
+      /* hr {
+                  margin: 20px 0;
+                } */
+
+      .step-header-kop,
+      .step-detail-kop,
+      .step-urls-kop {
+        font-size: 12px !important;
+      }
+    }
+
+    @media screen and (max-width: 551px) {
+      .step-detail-kop {
+        margin: 0px 20px 10px 20px;
+      }
+
+      .step-description-kop {
+        flex-direction: column;
+      }
+
+      .step-number-kop {
+        margin: 20px;
+      }
+
+      .step-urls-kop {
+        line-height: 32px;
+      }
+
+      .alert-kop,
+      .tip-kop {
+        margin: 20px;
+      }
+    }
+
+    @media screen and (max-width: 525px) {
+      .header-kop {
+        display: none;
+      }
+
+      .custom-cursor-kop {
+        width: 47px !important;
+        height: 47px !important;
+      }
+
+      .header-mobile-kop {
+        display: block;
+        color: #111;
+      }
+
+      .header-item-mobile-kop {
+        display: flex;
+        width: 100%;
+        /* align-items: center; */
+        padding-bottom: 10px;
+      }
+
+      .title-details-mobile-kop {
+        display: flex;
+        font-family: "Lato", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        align-items: center;
+        color: #454d57 !important;
+        text-transform: capitalize;
+      }
+
+      .title-details-mobile-kop img {
+        width: 25px;
+      }
+
+      .rectangle-img-kop {
+        padding-top: 25px;
+      }
+    }
+
+    .image-icon-kop {
+      border: 1px solid beige;
+      box-shadow: 0px 0px 3px #00108082;
+      height: 60px;
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      border: 1px solid #0000000a;
+      margin-right: 10px;
+    }
+
+    .watermark-icon{
+      width: 15%;
+      padding-top: 31px;
+    }
+  </style>
+</head>
+
+<body>
+      <section class="main-section-kop" style="margin: 30px 20%;">
+    <div class="header-kop">
+      <div class="header-item-kop">
+        <!-- <img class="logoIcon-kop"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAzNiA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuMDA3MyAzOS4yMzc4VjkuODA5NDRIMzUuOTE2NFYyNC41MjM2SDIyLjQ2MTlWMzkuMjM3OEg5LjAwNzNaTTQuMDI0MTMgNC4zNTk3NVYzNC44NzhIMC4wMzc1OTc3VjBIMzEuOTI5OVY0LjM1OTc1SDQuMDI0MTNaIiBmaWxsPSIjNTUzOUZGIi8+CjxwYXRoIGQ9Ik0yNi45NDY1IDI5LjQyODNWMzkuMjM3OEwzNS45MTYyIDI5LjQyODNIMjYuOTQ2NVoiIGZpbGw9IiNDMkQxMTIiLz4KPC9zdmc+Cg=="
+                    alt=""/> -->
+        <div class="image-icon-kop">
+
+          <img class="logoIcon-kop" src="" alt="document-icon" />
+        </div>
+        <!-- <img class="logoIcon-kop" src="" alt="document-icon" /> -->
+        <div class="header-content-kop">
+          <div class="title-kop">How to screenshot on Windows ?</div>
+          <div class="title-details-kop">
+            <div class="author">By Mitisha</div>
+            <span>|</span>
+            <!-- <div class="date">09-06-2024</div> -->
+            <div class="date">Sep 06, 2024</div>
+
+            <span>|</span>
+            <div class="icon-with-name-kop">
+              <img src="" alt="document-icon" />
+              <span style="color: #111">Kopyst</span>
+            </div>
+            <span>|</span>
+            <div class="date">5 Steps</div>
+          </div>
+          <div class="description-kop"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="header-mobile-kop">
+      <div class="header-item-mobile-kop">
+        <!-- <img class="logoIcon-kop"
+                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAzNiA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTkuMDA3MyAzOS4yMzc4VjkuODA5NDRIMzUuOTE2NFYyNC41MjM2SDIyLjQ2MTlWMzkuMjM3OEg5LjAwNzNaTTQuMDI0MTMgNC4zNTk3NVYzNC44NzhIMC4wMzc1OTc3VjBIMzEuOTI5OVY0LjM1OTc1SDQuMDI0MTNaIiBmaWxsPSIjNTUzOUZGIi8+CjxwYXRoIGQ9Ik0yNi45NDY1IDI5LjQyODNWMzkuMjM3OEwzNS45MTYyIDI5LjQyODNIMjYuOTQ2NVoiIGZpbGw9IiNDMkQxMTIiLz4KPC9zdmc+Cg=="
+                    alt="" width="40px" /> -->
+        <!-- <img class="logoIcon-kop" src="" alt="document-icon" width="40px" /> -->
+        <div class="image-icon-kop">
+
+          <img class="logoIcon-kop" src="" alt="document-icon" />
+        </div>
+        <div class="title-kop">How to screenshot on Windows ?</div>
+      </div>
+      <div class="title-details-mobile-kop">
+        <div class="author">By Mitisha</div>
+        |
+        <!-- <div class="date">09-06-2024</div>
+        <div class="date">Sep 06, 2024</div>
+
+        | -->
+        <div class="icon-with-name-kop">
+          <img src="" alt="document-icon" />
+          <span>Kopyst</span>
+        </div>
+        |
+        <div class="date">5 Steps</div> <br>
+
+      </div>
+
+    </div>
+
+    <!-- </div> -->
+
+    
+    <img class="rectangle-img-kop" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODQwIiBoZWlnaHQ9IjEiIHZpZXdCb3g9IjAgMCA4NDAgMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9Ijg0MCIgaGVpZ2h0PSIxIiBmaWxsPSIjRDlEOUQ5Ii8+Cjwvc3ZnPgo=" alt="" />
+
+
+            <div class="steps-kop">
+      <div class="step-description-kop">
+        <div class="step-number-kop">
+          <div class="step-number-count-kop">1</div>
+        </div>
+        <div class="step-detail-kop">
+          <div class="step-header-kop">
+            <span class="step-text-kop">Press "Windows + Shift + S" to open the snip & sketch tool.</span>
+                        <span></span>
+                      </div>
+          <div class="step-description-kop">
+          </div>
+        </div>
+      </div>
+          </div>
+            <!-- Add this condition to check if step_type is null or empty -->
+                    <div class="steps-kop">
+      <div class="step-description-kop">
+        <div class="step-number-kop">
+          <div class="step-number-count-kop">2</div>
+        </div>
+        <div class="step-detail-kop">
+          <div class="step-header-kop">
+            <span class="step-text-kop">Select the "Snip" type</span>
+                        <span></span>
+                      </div>
+          <div class="step-description-kop">Your screen will dim, and a toolbar will appear at the top. choose between rectangular clip, freeform clip, window clip, or fullscreen clip.
+          </div>
+        </div>
+      </div>
+            <div class="image-container-kop">
+        <img src="https://kopist-zehntech.s3.ap-south-1.amazonaws.com/documents/8562/step_59376_1729255354.png" alt="Merged Image" class="step-image-kop" id="screenshot-kop-2">
+
+
+        
+        <!-- <img alt="Image of step of Workflow" src="https://kopist-zehntech.s3.ap-south-1.amazonaws.com/images/8520240906_092815_66dacb2faf0e7screenshot_20240906135754687.png.png" class="step-image-kop" id="screenshot-kop-1">
+        
+        <img class="custom-cursor-kop" style="top: 855px; left: 49px;" width="20" height="20" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDciIGhlaWdodD0iNDciIHZpZXdCb3g9IjAgMCA0NyA0NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjMuNDU0NCIgY3k9IjIzLjQ1NDQiIHI9IjIyLjk1NDQiIGZpbGw9IiM4QkNBMDUiIGZpbGwtb3BhY2l0eT0iMC4yMSIgc3Ryb2tlPSIjOEJDQTA1Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuODc0NCAyOC42MDgxTDE5LjQ5MzcgMjQuNTAwNEMxOS40OTM3IDI0LjUwMDQgMjkuODQzNSAzNi4yODQzIDQwLjY5OTIgMjYuOTUxN0MyNS41NzEgMjkuNzk1MiAyMy42NTA1IDIwLjgwMjkgMjMuNjUwNSAyMC44MDI5TDI4LjI3MDQgMTYuNjk1OEwxMy40Mzk3IDEzLjUwNjNMMTQuODc0NCAyOC42MDgxWiIgZmlsbD0iIzhCQ0EwNSIvPgo8L3N2Zz4K" alt="action area" id="action-area-kop-1"> -->
+      </div>
+          </div>
+            <!-- Add this condition to check if step_type is null or empty -->
+                    <div class="steps-kop">
+      <div class="step-description-kop">
+        <div class="step-number-kop">
+          <div class="step-number-count-kop">3</div>
+        </div>
+        <div class="step-detail-kop">
+          <div class="step-header-kop">
+            <span class="step-text-kop">Click and drag to select the "Area" or choose the screen option. The screenshot will be copied to your clipboard.                          </span>
+                        <span></span>
+                      </div>
+          <div class="step-description-kop">
+          </div>
+        </div>
+      </div>
+            <div class="image-container-kop">
+        <img src="https://kopist-zehntech.s3.ap-south-1.amazonaws.com/documents/8562/step_59378_1729255355.png" alt="Merged Image" class="step-image-kop" id="screenshot-kop-3">
+
+
+        
+        <!-- <img alt="Image of step of Workflow" src="https://kopist-zehntech.s3.ap-south-1.amazonaws.com/images/8520240906_092822_66dacb36b457cscreenshot_20240906135801615.png.png" class="step-image-kop" id="screenshot-kop-2">
+        
+        <img class="custom-cursor-kop" style="top: 1599px; left: 786px;" width="20" height="20" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDciIGhlaWdodD0iNDciIHZpZXdCb3g9IjAgMCA0NyA0NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjMuNDU0NCIgY3k9IjIzLjQ1NDQiIHI9IjIyLjk1NDQiIGZpbGw9IiM4QkNBMDUiIGZpbGwtb3BhY2l0eT0iMC4yMSIgc3Ryb2tlPSIjOEJDQTA1Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuODc0NCAyOC42MDgxTDE5LjQ5MzcgMjQuNTAwNEMxOS40OTM3IDI0LjUwMDQgMjkuODQzNSAzNi4yODQzIDQwLjY5OTIgMjYuOTUxN0MyNS41NzEgMjkuNzk1MiAyMy42NTA1IDIwLjgwMjkgMjMuNjUwNSAyMC44MDI5TDI4LjI3MDQgMTYuNjk1OEwxMy40Mzk3IDEzLjUwNjNMMTQuODc0NCAyOC42MDgxWiIgZmlsbD0iIzhCQ0EwNSIvPgo8L3N2Zz4K" alt="action area" id="action-area-kop-2"> -->
+      </div>
+          </div>
+            <!-- Add this condition to check if step_type is null or empty -->
+                    <div class="steps-kop">
+      <div class="step-description-kop">
+        <div class="step-number-kop">
+          <div class="step-number-count-kop">4</div>
+        </div>
+        <div class="step-detail-kop">
+          <div class="step-header-kop">
+            <span class="step-text-kop">Click on it to open the "Screenshot" in snip & sketch, where you can annotate and save it.</span>
+                        <span></span>
+                      </div>
+          <div class="step-description-kop">
+          </div>
+        </div>
+      </div>
+            <div class="image-container-kop">
+        <img src="https://kopist-zehntech.s3.ap-south-1.amazonaws.com/documents/8562/step_59379_1729255356.png" alt="Merged Image" class="step-image-kop" id="screenshot-kop-4">
+
+
+        
+        <!-- <img alt="Image of step of Workflow" src="https://kopist-zehntech.s3.ap-south-1.amazonaws.com/images/8520240906_092824_66dacb3875cbescreenshot_20240906135803495.png.png" class="step-image-kop" id="screenshot-kop-3">
+        
+        <img class="custom-cursor-kop" style="top: 1687px; left: 824px;" width="20" height="20" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDciIGhlaWdodD0iNDciIHZpZXdCb3g9IjAgMCA0NyA0NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjMuNDU0NCIgY3k9IjIzLjQ1NDQiIHI9IjIyLjk1NDQiIGZpbGw9IiM4QkNBMDUiIGZpbGwtb3BhY2l0eT0iMC4yMSIgc3Ryb2tlPSIjOEJDQTA1Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuODc0NCAyOC42MDgxTDE5LjQ5MzcgMjQuNTAwNEMxOS40OTM3IDI0LjUwMDQgMjkuODQzNSAzNi4yODQzIDQwLjY5OTIgMjYuOTUxN0MyNS41NzEgMjkuNzk1MiAyMy42NTA1IDIwLjgwMjkgMjMuNjUwNSAyMC44MDI5TDI4LjI3MDQgMTYuNjk1OEwxMy40Mzk3IDEzLjUwNjNMMTQuODc0NCAyOC42MDgxWiIgZmlsbD0iIzhCQ0EwNSIvPgo8L3N2Zz4K" alt="action area" id="action-area-kop-3"> -->
+      </div>
+          </div>
+            <!-- Add this condition to check if step_type is null or empty -->
+                    <div class="steps-kop">
+      <div class="step-description-kop">
+        <div class="step-number-kop">
+          <div class="step-number-count-kop">5</div>
+        </div>
+        <div class="step-detail-kop">
+          <div class="step-header-kop">
+            <span class="step-text-kop">In snip & sketch, click the disk icon or "File > Save As", and choose your file format and location.                                   </span>
+                        <span></span>
+                      </div>
+          <div class="step-description-kop">By following these steps you can click screenshot on windows
+          </div>
+        </div>
+      </div>
+            <div class="image-container-kop">
+        <img src="https://kopist-zehntech.s3.ap-south-1.amazonaws.com/documents/8562/step_59380_1729255357.png" alt="Merged Image" class="step-image-kop" id="screenshot-kop-5">
+
+
+        
+        <!-- <img alt="Image of step of Workflow" src="https://kopist-zehntech.s3.ap-south-1.amazonaws.com/images/8520240906_092827_66dacb3bbec52screenshot_20240906135806766.png.png" class="step-image-kop" id="screenshot-kop-4">
+        
+        <img class="custom-cursor-kop" style="top: 1298px; left: 150px;" width="20" height="20" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDciIGhlaWdodD0iNDciIHZpZXdCb3g9IjAgMCA0NyA0NyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjMuNDU0NCIgY3k9IjIzLjQ1NDQiIHI9IjIyLjk1NDQiIGZpbGw9IiM4QkNBMDUiIGZpbGwtb3BhY2l0eT0iMC4yMSIgc3Ryb2tlPSIjOEJDQTA1Ii8+CjxwYXRoIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xpcC1ydWxlPSJldmVub2RkIiBkPSJNMTQuODc0NCAyOC42MDgxTDE5LjQ5MzcgMjQuNTAwNEMxOS40OTM3IDI0LjUwMDQgMjkuODQzNSAzNi4yODQzIDQwLjY5OTIgMjYuOTUxN0MyNS41NzEgMjkuNzk1MiAyMy42NTA1IDIwLjgwMjkgMjMuNjUwNSAyMC44MDI5TDI4LjI3MDQgMTYuNjk1OEwxMy40Mzk3IDEzLjUwNjNMMTQuODc0NCAyOC42MDgxWiIgZmlsbD0iIzhCQ0EwNSIvPgo8L3N2Zz4K" alt="action area" id="action-area-kop-4"> -->
+      </div>
+          </div>
+            <!-- Add this condition to check if step_type is null or empty -->
+              </section>
+
+
+  <script type="text/javascript">
+    const documentData = {"id":8562,"name":"How to screenshot on Windows ?","slug":"o1jgkz","views":4,"description":null,"status":"Started","icon":null,"workflow_icon_name":"Kopyst","created_at":"2024-09-06T09:28:08.000000Z","updated_at":"2024-10-18T12:38:29.000000Z","deleted_at":null,"source":"desktop","cursor_color":"#FF0000","count":5,"user":"Mitisha","created_at_human":"09-06-2024","doument_steps":[{"id":59375,"document_id":8562,"user_id":85,"name":"Press \u0022Windows + Shift + S\u0022 to open the snip \u0026 sketch tool.","position_x":null,"position_y":null,"order":1,"description":null,"action":"Press","url":null,"image":null,"step_type":null,"check_status":0,"created_at":"2024-09-06T09:28:15.000000Z","updated_at":"2024-10-18T12:38:47.000000Z","deleted_at":null,"width":null,"height":null,"scaleRatio":null,"cursor_status":0},{"id":59376,"document_id":8562,"user_id":85,"name":"Select the \u0022Snip\u0022 type","position_x":"855","position_y":"49","order":2,"description":"Your screen will dim, and a toolbar will appear at the top. choose between rectangular clip, freeform clip, window clip, or fullscreen clip.","action":"Click","url":null,"image":"https:\/\/kopist-zehntech.s3.ap-south-1.amazonaws.com\/images\/8520240906_092815_66dacb2faf0e7screenshot_20240906135754687.png.png","step_type":null,"check_status":0,"created_at":"2024-09-06T09:28:16.000000Z","updated_at":"2024-10-18T12:39:34.000000Z","deleted_at":null,"width":1920,"height":1080,"scaleRatio":null,"cursor_status":0},{"id":59378,"document_id":8562,"user_id":85,"name":"Click and drag to select the \u0022Area\u0022 or choose the screen option. The screenshot will be copied to your clipboard.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000","position_x":"1599","position_y":"786","order":4,"description":null,"action":"Click","url":null,"image":"https:\/\/kopist-zehntech.s3.ap-south-1.amazonaws.com\/images\/8520240906_092822_66dacb36b457cscreenshot_20240906135801615.png.png","step_type":null,"check_status":0,"created_at":"2024-09-06T09:28:23.000000Z","updated_at":"2024-09-06T09:32:37.000000Z","deleted_at":null,"width":1920,"height":1080,"scaleRatio":null,"cursor_status":0},{"id":59379,"document_id":8562,"user_id":85,"name":"Click on it to open the \u0022Screenshot\u0022 in snip \u0026 sketch, where you can annotate and save it.","position_x":"1687","position_y":"824","order":5,"description":null,"action":"Click","url":null,"image":"https:\/\/kopist-zehntech.s3.ap-south-1.amazonaws.com\/images\/8520240906_092824_66dacb3875cbescreenshot_20240906135803495.png.png","step_type":null,"check_status":0,"created_at":"2024-09-06T09:28:24.000000Z","updated_at":"2024-10-18T12:40:01.000000Z","deleted_at":null,"width":1920,"height":1080,"scaleRatio":null,"cursor_status":0},{"id":59380,"document_id":8562,"user_id":85,"name":"In snip \u0026 sketch, click the disk icon or \u0022File \u003E Save As\u0022, and choose your file format and location.\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000","position_x":"1298","position_y":"150","order":6,"description":"By following these steps you can click screenshot on windows","action":"Click","url":null,"image":"https:\/\/kopist-zehntech.s3.ap-south-1.amazonaws.com\/images\/8520240906_092827_66dacb3bbec52screenshot_20240906135806766.png.png","step_type":null,"check_status":0,"created_at":"2024-09-06T09:28:28.000000Z","updated_at":"2024-10-18T12:41:50.000000Z","deleted_at":null,"width":1920,"height":1080,"scaleRatio":null,"cursor_status":0}],"doument_users":[{"id":8644,"document_id":8562,"role_id":1,"user_id":85,"status":"Joined","is_owner":"Yes","email":"mitisha.agrawal@zehntech.com","check_mode":1,"plan_order_id":207,"created_at":"2024-09-06T09:28:08.000000Z","updated_at":"2024-09-06T09:28:08.000000Z","deleted_at":null,"document_permission":"can edit","document_viewed":null,"shared_by_userId":null,"share_userEmail":null,"is_password_protected":0,"password":null,"team_id":136,"is_private":null,"users":{"id":85,"first_name":"Mitisha","last_name":"Agrawal","email":"mitisha.agrawal@zehntech.com","email_verified_at":"2024-03-12T14:38:49.000000Z","google_id":null,"provider":null,"image":null,"card_view":"grid","guest_message":null,"is_dark":0,"can_login":0,"updated_at":"2024-10-07T07:22:36.000000Z","deleted_at":null,"created_at":"2024-03-12T14:35:31.000000Z","last_password_update":"2024-03-12 14:35:31"}}]};
+
+
+    positioning();
+
+    function positioning() {
+
+
+      setTimeout(() => {
+        for (let i = 0; i < documentData?.doument_steps.length; i++) {
+          const image = document.getElementById('screenshot-kop-' + i);
+          const actionArea = document.getElementById('action-area-kop-' + i);
+
+          const data = documentData?.doument_steps[i];
+
+          if (image && data.position_x && data.position_y) {
+            const container = image.parentElement;
+            const containerWidth = container?.clientWidth;
+            const containerHeight = container?.clientHeight;
+            const imageWidth = image.width;
+            const imageHeight = image.height;
+            // Calculate the position of the image within the container
+            const clickX = data.position_x;
+            const clickY = data.position_y;
+            let newX = (containerWidth.width / 2) - clickX;
+            let newY = (containerHeight.height / 2) - clickY;
+
+            // Adjust newX and newY to keep the image within the visible range
+            if (newX > 0) {
+              newX = 0;
+            } else if (newX < containerWidth - imageWidth) {
+              newX = containerWidth - imageWidth;
+            }
+
+            if (newY > 0) {
+              newY = 0;
+            } else if (newY < containerHeight - imageHeight) {
+              newY = containerHeight - imageHeight;
+            }
+
+            // Apply the new position to the image element
+            image.style.left = `${newX}px`;
+            image.style.top = `${newY}px`;
+
+            ///// dot position
+            if (data.width && data.height) {
+              const widthScale = imageWidth / data.width;
+              const heightScale = imageHeight / data.height;
+
+              // Calculate the relative top and left positions
+              const relativeTop = clickY * heightScale + newY;
+              const relativeLeft = clickX * widthScale + newX;
+
+              if (actionArea) {
+                actionArea.style.top = `${relativeTop + 5}px`;
+                actionArea.style.left = `${relativeLeft - 20}px`;
+              }
+            }
+          }
+        }
+      }, 0);
+    }
+
